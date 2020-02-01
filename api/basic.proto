@@ -1,0 +1,15 @@
+syntax = "proto3";
+package basic;
+option go_package = "github.com/prokopovich/grpc-server/api/basic";
+
+service BasicAPI{
+    rpc Test(TestRequest) returns (TestResponse) {}
+}
+
+message TestRequest {
+    string Message = 1;
+}
+
+message TestResponse {
+    string Message = 1;
+}
